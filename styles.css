@@ -26,17 +26,20 @@ footer{
     grid-area: footer;
     display: flex;
     justify-content: space-between;
+    background-color: rgb(240, 240, 240);
 }
 div{
     display: flex;
     justify-content: center;
     align-items: space-between;
+    margin: 15px;
     padding-top: 10px;
 }
 form{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 10px;
     grid-template-areas:
     "searchbar searchbar"
     "buttons buttons";
@@ -50,6 +53,8 @@ a{
 }
 .search{
     border:none;
+    width: 55vw;
+    max-width: 500px;
 }
 #googbar{
     display: flex;
@@ -58,7 +63,10 @@ a{
     align-items: center;
     border-radius: 15px;
     border: solid gray 1px;
-    height: 3vh;
-    width: 40vw;
+    height: 35px;
+    width: 60vw;
+    min-width: 150px;
+    max-width: 550px;
+    margin: 0px;
     padding-top: 0px;
 }
