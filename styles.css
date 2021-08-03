@@ -39,7 +39,6 @@ footer{
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-content: center;
-    color:rgb(75, 75, 75);
     background-color: rgb(245, 245, 245);
 }
 div{
@@ -71,8 +70,9 @@ input{
     width: 25vw;
     max-width: 150px;
 }
-a{
+a, a:visited{
     align-self: center;
+    color:rgb(75, 75, 75);
     text-decoration: none;
 }
 .search{
@@ -89,9 +89,9 @@ a{
     grid-area: searchbar;
     justify-items: center;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 20px;
     border: solid rgb(197, 197, 197) 1px;
-    height: 35px;
+    height: 40px;
     width: 60vw;
     min-width: 150px;
     max-width: 550px;
@@ -108,19 +108,22 @@ input:hover{
     outline: none;
     border: none;
 }
-@media (min-width:580px){
+@media (min-width:604px){
     body{
         font-size: 14px;
         grid-template-rows: 5vh 90vh 5vh;
     }
+    nav{
+        padding-top: 10px;
+    }
     main{
-        padding-bottom: 40vh;
+        padding-bottom: 25vh;
     }
     footer{
         justify-content: space-between;
     }
     ul{
-        margin: 0px 25px 0px 25px;
+        margin: 0px 25px 5px 20px;
     }
     li{
         margin: 10px 10px 0px 10px;
