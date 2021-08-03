@@ -1,3 +1,4 @@
+/* General styles */
 body{
     color: rgb(10, 10, 10);
     display: grid;
@@ -10,12 +11,38 @@ body{
     "main main main"
     "footer footer footer";
 }
+/* For the nav links */
 nav{
     grid-area: header;
     display: flex;
     justify-content: space-between;
     margin: 0px 25px 0px 25px;
 }
+ul{
+    display: flex;
+    align-self: center;
+}
+li{
+    margin: 5px 5px 0px 5px;
+}
+a, a:visited, input{
+    color:rgb(75, 75, 75);
+    text-decoration: none;
+}
+a:hover, a:focus{
+    text-decoration: underline;
+}
+.search{
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 10, 10);
+    justify-self: center;
+    width: 55vw;
+    max-width: 500px;
+}
+.lucky{
+    justify-self: self-start;
+}
+/* For the logo, search bar, and submit inputs */
 main{
     grid-area: main;
     display: flex;
@@ -23,31 +50,8 @@ main{
     justify-items: stretch;
     justify-content: center;
     padding-bottom: 15vh;
-    align-items: stretch;
+    align-items: center;
     align-content: center;
-}
-ul{
-    display: flex;
-    align-self:center;
-}
-li{
-    margin: 5px 5px 0px 5px;
-}
-footer{
-    grid-area: footer;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-content: center;
-    background-color: rgb(245, 245, 245);
-}
-div{
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-    align-content: space-between;
-    margin: 15px;
-    padding-top: 10px;
 }
 form{
     display: grid;
@@ -58,7 +62,23 @@ form{
     grid-template-areas:
     "searchbar searchbar"
     "buttons buttons";
+    margin: 15px;
+    padding-top: 10px;
     justify-items: self-end;
+    justify-self: center;
+}
+div{
+    display: flex;
+    grid-area: searchbar;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    border-radius: 20px;
+    border: solid rgb(197, 197, 197) 1px;
+    height: 40px;
+    width: 60vw;
+    min-width: 150px;
+    max-width: 550px;
 }
 input{
     background-color: rgb(248, 248, 248);
@@ -70,11 +90,6 @@ input{
     width: 25vw;
     max-width: 150px;
 }
-a, a:visited{
-    align-self: center;
-    color:rgb(75, 75, 75);
-    text-decoration: none;
-}
 .search{
     background-color: rgb(255, 255, 255);
     justify-self: center;
@@ -84,23 +99,6 @@ a, a:visited{
 .lucky{
     justify-self: self-start;
 }
-#googbar{
-    display: flex;
-    grid-area: searchbar;
-    justify-items: center;
-    align-items: center;
-    border-radius: 20px;
-    border: solid rgb(197, 197, 197) 1px;
-    height: 40px;
-    width: 60vw;
-    min-width: 150px;
-    max-width: 550px;
-    margin: 0px;
-    padding-top: 0px;
-}
-a:hover, a:focus{
-    text-decoration: underline;
-}
 input:hover{
     border: 1px solid rgb(197, 197, 197);
 }
@@ -108,24 +106,38 @@ input:hover{
     outline: none;
     border: none;
 }
+/* Changes for the footer specifically */
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    background-color: rgb(245, 245, 245);
+}
+/* Changes for different viewport sizes */
 @media (min-width:604px){
     body{
-        font-size: 14px;
+        font-size: 15px;
         grid-template-rows: 5vh 90vh 5vh;
     }
     nav{
         padding-top: 10px;
-    }
-    main{
-        padding-bottom: 25vh;
-    }
-    footer{
-        justify-content: space-between;
     }
     ul{
         margin: 0px 25px 5px 20px;
     }
     li{
         margin: 10px 10px 0px 10px;
+    }
+    main{
+        padding-bottom: 25vh;
+    }
+    input{
+        letter-spacing: 0.02em;
+        font-size: 15px;
+    }
+    footer{
+        justify-content: space-between;
     }
 }
