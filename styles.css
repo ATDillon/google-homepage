@@ -1,4 +1,5 @@
 /* General styles */
+
 body{
     color: rgb(10, 10, 10);
     display: grid;
@@ -11,6 +12,7 @@ body{
     "main main main"
     "footer footer footer";
 }
+
 /* For the nav links */
 nav{
     grid-area: header;
@@ -32,16 +34,7 @@ a, a:visited, input{
 a:hover, a:focus{
     text-decoration: underline;
 }
-.search{
-    background-color: rgb(255, 255, 255);
-    color: rgb(10, 10, 10);
-    justify-self: center;
-    width: 55vw;
-    max-width: 500px;
-}
-.lucky{
-    justify-self: self-start;
-}
+
 /* For the logo, search bar, and submit inputs */
 main{
     grid-area: main;
@@ -106,6 +99,7 @@ input:hover{
     outline: none;
     border: none;
 }
+
 /* Changes for the footer specifically */
 footer{
     grid-area: footer;
@@ -115,6 +109,7 @@ footer{
     align-content: center;
     background-color: rgb(245, 245, 245);
 }
+
 /* Changes for different viewport sizes */
 @media (min-width:604px){
     body{
